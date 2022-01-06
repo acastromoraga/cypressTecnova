@@ -46,6 +46,20 @@ Cypress.Commands.add('selecionarDiaCalendario', (dia) => {
 
         })
 })
+
+Cypress.Commands.add('selecionarProductoCarroCompra', (busProducto) =>{
+    cy.get('.search-display__products').find('.product')
+            .each(($elemento, index, $lista) => {
+
+                const textProduct = $elemento.find('.product_name').text()
+                if (textProduct.includes(busProducto)) {
+                    cy.wrap($elemento).find('a.product_name').click()
+                }
+
+            })
+        cy.wait(3000)
+
+})
 //
 //
 // -- This is a child command --

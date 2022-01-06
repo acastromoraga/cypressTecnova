@@ -1,7 +1,18 @@
 {
+  "scripts": {
+    "open": ".\\node_modules\\.bin\\cypress open",
+    "test": ".\\node_modules\\.bin\\cypress open",
+    "testChrome": "npm run test -- --browser chrome",
+    "testChrome2": "npm run test -- --browser chrome --spec .\\cypress\\integration\\pruebasAvanzadasValorTotal.js  --env url=https://urldefense.com/v3/__https://demo.opencart.com/automationpractice.com__;!!EyGG_rL3!Xx__mMPiyY6POdSOGF7ZOgnESx8eS0xvXQhPFIjiNk0vjbfLFyq-anTyWxSa6Emzkex2lCusU0wYR1d69Q$ ",
+    "testOpen": ".\\node_modules\\.bin\\cypress open",
+    "testTestUnico": "npx cypress run --record --key 1050086f-eb41-438c-9aab-793d3a8cd485 --spec .\\cypress\\integration\\pruebasAvanzadasValorTotal.js  --env url=https://urldefense.com/v3/__https://demo.opencart.com/automationpractice.com__;!!EyGG_rL3!Xx__mMPiyY6POdSOGF7ZOgnESx8eS0xvXQhPFIjiNk0vjbfLFyq-anTyWxSa6Emzkex2lCusU0wYR1d69Q$ ","testDash": "npx cypress run --record --key 1050086f-eb41-438c-9aab-793d3a8cd485 --spec .\\cypress\\integration\\pruebasAvanzadasValorTotal.js --env url=https://urldefense.com/v3/__https://demo.opencart.com/automationpractice.com__;!!EyGG_rL3!Xx__mMPiyY6POdSOGF7ZOgnESx8eS0xvXQhPFIjiNk0vjbfLFyq-anTyWxSa6Emzkex2lCusU0wYR1d69Q$ "
+  },
+
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.1.0",
-    "cypress": "^8.5.0",
+    "@shelex/cypress-allure-plugin": "^2.23.0",
+    "allure-commandline": "^2.17.2",
+    "cypress": "^8.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^1.6.2"
   }

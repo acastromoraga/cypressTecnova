@@ -58,6 +58,7 @@ describe('Suite de pruebas de tablero Trello', function () {
         TARJETA.agregarArchivoTarjeta('files/fileTest.pdf')
         TARJETA.clickCerrarDetallesTarjeta()
         //Mover tarjeta
+        cy.pause()
         HOME_PAGE.abrirTarjeta()
         HOME_PAGE.abrirMoverTarjeta()
         HOME_PAGE.seleccionarEstadoTarjeta('En proceso')
