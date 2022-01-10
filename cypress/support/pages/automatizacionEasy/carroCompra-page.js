@@ -9,14 +9,19 @@ class Carro_Compra_page_PO {
         
     clickComprar(){
         cy.get('#ShopCartPagingDisplay > .row > .col12 > .button').click()
-    }    
+    }
+    
+    clickRetiroEnTienda(){
+        cy.get('#WC_RT_radio_92545 > #RT_BOPIS').click()
+    }
         
     seleccionarRegion(region){
-        cy.get('#state_92545').select(region)
+        cy.get('#state_200221').select(region)
+        
     } 
     
-    seleccionarTienda(){
-        cy.get('#stores_92545').select('Easy Curico')
+    seleccionarTienda(tienda){
+        cy.get('#stores_200221').select(tienda)
     }
         
     clickContinuar(){

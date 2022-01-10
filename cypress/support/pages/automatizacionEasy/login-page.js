@@ -20,5 +20,9 @@ clickBottonIniciarSesion(){
     cy.xpath('//span[contains(.,"Iniciar sesión")]').click()
 }
 
+verificarTexto(texto){
+    cy.get('#Header_GlobalLogin_logonErrorMessage_GL').should('have.text',texto)
+}
+
 }
 export default Login_Easy_PO

@@ -23,5 +23,9 @@ class Login_Trello_PO {
         cy.get('#login-submit > .css-19r5em7 > span').click()
     }
 
+    verificarTexto(texto){
+        cy.get('#login-error').should('contain.text',texto)
+    }
+
 }
 export default Login_Trello_PO
